@@ -1,0 +1,26 @@
+{
+    "ws_url": "ws://localhost/api/status/ws",
+    "name": "My PC",
+    "alerts": {
+        "600": {
+          "type": "play",
+          "file": "sounds\\10min.wav"
+        },
+        "300": {
+          "type": "play",
+          "file": "sounds\\5min.wav"
+        },
+        "120": {
+          "type": "play",
+          "file": "sounds\\2min.wav"
+        },
+        "0": {
+          "type": "play",
+          "file": "sounds\\0min.wav"
+        },
+        "-5": {
+            "type": "run",
+            "cmd": "rundll32.exe user32.dll,LockWorkStation"
+        }
+    }
+}
