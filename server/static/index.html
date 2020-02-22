@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Timer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+    <style type='text/css'>
+    #min {
+        display: inline;
+        vertical-align:top;
+        width: 60px;
+    }
+    #sec {
+        display: inline;
+        vertical-align:top;
+        width: 60px;
+    }
+    #colon {
+        font-size: 30;
+    }
+    #time-container {
+        display: flex;
+        align-items: center;
+    }
+    #time {
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+<noscript>JavaScript is required for this page. Please turn on JavaScript. 
+Sorry for the inconvienience! </noscript>
+
+<h1>Media Timer</h1>
+<div id='notes'>NOTES: Timer is supposed to go into negative until stopped. <br>
+If timer behaves erractically then someone else is probably controlling it at the same time. 
+</div>
+<div id='status'><h3 id='msg'>Loading timer status...</h3></div>
+<div id="time-container">
+    <span id='time'></span>
+    <img id="loading" style="display: none" src="/static/loading.gif" height="30" alt="Loading...">
+</div>
+
+
+<button id='start-btn' disabled>Start</button>
+<button id='stop-btn' disabled>Stop</button>
+<br>
+<input id='min' type='number'><span id="colon">:</span><input id='sec' type='number'>
+<br>
+<button id='set-btn' disabled>Set</button>
+<br>
+<h3>Connected clients:</h3>
+<p id="connected-clients"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src='/static/main.js'></script>
+</body>
